@@ -5,7 +5,7 @@
 #include <string>
 using namespace std;
 
-class petShelter {
+class PetShelter {
 private:
     // Pet struct declaration
     struct Pet {
@@ -34,11 +34,14 @@ private:
 
     void radixSort(int shelter[]);
 
-    void resort (int shelter[], string );
+    void reSort (int shelter[], string);
 
 public:
+    petShelter();
 
-    void sort() {}
+    bool buyPet();
+    bool sellPet();
+    void sort();
 
 };
 
