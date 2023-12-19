@@ -3,6 +3,7 @@
 #define PETSHELTER_H
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 class PetShelter {
@@ -18,11 +19,15 @@ private:
         Pet (string name, int age, double value, int happiness) : name(name), age(age), value(value), happiness(happiness) {
         }
     };
+    bool sortedByName = true;
+    bool sortedByAge = false;
+    bool sortedByValue = false;
+    bool sortedByValue = false;
 
-    Pet* shelter[];
+    vector<Pet*> shelter;
 
     // insert methods
-    bool insert (int shelter[], Pet* pet);
+    bool insert (Pet* pet);
 
     bool search(int shelter[], Pet* pet);
 
@@ -32,15 +37,18 @@ private:
 
     void displayPets();
 
-    void radixSort(int shelter[]);
+    void radixSort();
 
     void reSort (int shelter[], string);
 
 public:
-    petShelter();
+    // Constructor declaration
+    PetShelter();
 
     bool buyPet();
+
     bool sellPet();
+
     void sort();
 
 };
